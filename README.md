@@ -4,7 +4,7 @@
 
 Este projeto é uma calculadora simples criada com HTML, JavaScript e CSS. Foi desenvolvido como parte do aprendizado dessas tecnologias, com foco especial na interação entre botões usando JavaScript.
 
-Clique [aqui](https://brenolira01.github.io/Calculadora-Javascript/) para ver o projeto.
+Clique [aqui](https://github.com/EuCaioOrnelas/calculadora) para ver o projeto.
 
 ## Dificuldades Enfrentadas
 
@@ -20,7 +20,7 @@ Primeiro precisamos checar se já existe ponto na tela. Pra isso, vamos utilizar
 Exemplo:
 
 ```javascript
-tela.value.includes(".")
+tela.value.includes(".");
 ```
 
 Em seguida vamos usar uma estrutura de controle `if` e `else`.
@@ -29,24 +29,26 @@ Exemplo:
 
 ```javascript
 if (tela.value.includes(".")) {
-    return; 
-  } else {
-    tela.value += ponto.innerText;
-  }
+  return;
+} else {
+  tela.value += ponto.innerText;
+}
 ```
-O `return` serve para encerrar a execução da função, impedindo a inserção do ponto. E o ``else`` é pra caso o contrário o código segue normalmente.
+
+O `return` serve para encerrar a execução da função, impedindo a inserção do ponto. E o `else` é pra caso o contrário o código segue normalmente.
 
 Código completo:
 
 ```javascript
-tela.value.includes(".")
+tela.value.includes(".");
 
 if (tela.value.includes(".")) {
-    return; 
-  } else {
-    tela.value += ponto.innerText;
-  }
+  return;
+} else {
+  tela.value += ponto.innerText;
+}
 ```
+
 </details>
 
 <details>
@@ -62,7 +64,7 @@ Pra isso vamos obter o último caractere da tela utilizando o método `slice()`.
 let ultimoCaractere = tela.value.slice(-1);
 ```
 
- Em seguida, usamos o método `includes()` para verificar se ele é um operador.
+Em seguida, usamos o método `includes()` para verificar se ele é um operador.
 
 ```javascript
 // verifica se ele é um operador.
@@ -75,14 +77,15 @@ Exemplo:
 
 ```javascript
 if (substituirOperador) {
-      tela.value = tela.value.slice(0, -1) + botao.innerText;
-    } else {
-      tela.value += botao.innerText;
-    }
+  tela.value = tela.value.slice(0, -1) + botao.innerText;
+} else {
+  tela.value += botao.innerText;
+}
 ```
-O trecho ``.slice(0, -1)`` seleciona todos os caracteres da String, exceto o último. É como se estivéssemos apagando o último caractere da tela. Em seguida o ``+ botao.innerText`` coloca um novo.
 
-O ``else`` é pra caso o contrário o código segue normalmente.
+O trecho `.slice(0, -1)` seleciona todos os caracteres da String, exceto o último. É como se estivéssemos apagando o último caractere da tela. Em seguida o `+ botao.innerText` coloca um novo.
+
+O `else` é pra caso o contrário o código segue normalmente.
 
 Código completo:
 
@@ -92,10 +95,10 @@ let ultimoCaractere = tela.value.slice(-1);
 let substituirOperador = "+-x÷".includes(ultimoCaractere);
 
 if (substituirOperador) {
-      tela.value = tela.value.slice(0, -1) + botao.innerText;
-    } else {
-      tela.value += botao.innerText;
-    }
+  tela.value = tela.value.slice(0, -1) + botao.innerText;
+} else {
+  tela.value += botao.innerText;
+}
 ```
 
 </details>
@@ -111,9 +114,9 @@ Para aplicarmos a notação científica, é necessário definir um limite de tam
 
 por exemplo:
 
-Fazendo o calculo 9,6 x 3 = 28.799999999999997, temos o resultado de ``18 caracteres``. Para que o resultado não seja tão grande podemos usar uma estrutura de controle como `if` e `else`.
+Fazendo o calculo 9,6 x 3 = 28.799999999999997, temos o resultado de `18 caracteres`. Para que o resultado não seja tão grande podemos usar uma estrutura de controle como `if` e `else`.
 
-Vamos colocar um limite de ``10 caracteres``, quando ele for ultrapassado, sera feita a notação científica.
+Vamos colocar um limite de `10 caracteres`, quando ele for ultrapassado, sera feita a notação científica.
 
 Mas antes precisamos converter o resultado do calculo para string para obtermos o seu tamanho utilizando `.toString()`. Assim podemos saber quantos caracteres tem o resultado.
 
@@ -129,8 +132,8 @@ Exemplo:
 
 ```javascript
 if (resultadoString.length > 10) {
-      resultado = resultado.toFixed(1);
-    }
+  resultado = resultado.toFixed(1);
+}
 ```
 
 Com isso, temos 9,6 x 3 = **28.8**
@@ -157,7 +160,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas e soli
 
 ## Contato
 
-- [Email](mailto:franciscobrenolira@gmail.com)
+- [Email](mailto:caioornelasoficial@gmail.com)
 
 ## Licença
 
